@@ -39,6 +39,7 @@
 <body>
     <h1>Laporan Surat Keluar</h1>
     <h2>Total Surat : {{ $suratKeluar->count() }}</h2>
+    <h2>Periode : {{ \Carbon\Carbon::parse($createdFrom)->locale('id')->translatedFormat('d F Y') }} - {{ \Carbon\Carbon::parse($createdUntil)->locale('id')->translatedFormat('d F Y') }}</h2>
     <table>
         <thead>
             <tr>

@@ -29,7 +29,7 @@ class DatabaseSeeder extends Seeder
         //     'password' => Hash::make('password'),
         //     'isAdmin' => false
         // ]);
-        SuratMasuk::factory(25)->create();
-        SuratKeluar::factory(30)->create();
+        SuratMasuk::factory(15)->create();
+        SuratKeluar::factory(20)->create();
     }
 }

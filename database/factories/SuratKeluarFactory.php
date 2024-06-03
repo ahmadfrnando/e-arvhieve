@@ -24,8 +24,8 @@ class SuratKeluarFactory extends Factory
             'penerima' => $faker->company, // Nama perusahaan atau instansi sebagai pengirim
             'file' => $faker->mimeType(), // Nama file atau path file (asumsi menggunakan file generator dari Faker)
             'status' => $faker->randomElement(['Diproses', 'Ditindaklanjutin', 'Ditolak', 'Disesuaikan']),
-            'created_at' => $faker->dateTimeBetween('-1 year', 'now'), // Tanggal dibuat acak antara 1 tahun yang lalu hingga sekarang
-            'updated_at' => $faker->dateTimeBetween('-1 year', 'now'), // Tanggal diupdate acak antara 1 tahun yang lalu hingga sekarang
+            'created_at' => $faker->dateTimeBetween('2024-05-01', '2024-05-31'), // Tanggal dibuat acak antara 1 tahun yang lalu hingga sekarang
+            'updated_at' => $faker->dateTimeBetween('2024-05-01', '2024-05-31'), // Tanggal diupdate acak antara 1 tahun yang lalu hingga sekarang
         ];
     }
 }

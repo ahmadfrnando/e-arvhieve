@@ -32,7 +32,7 @@ class DinasResource extends Resource
     {
         return $table
             ->columns([
-                TextColumn::make('namadinas')->searchable(),
+                TextColumn::make('namadinas')->label('Nama Dinas')->searchable(),
                 TextColumn::make('email')->searchable(),
                 TextColumn::make('alamat')->searchable(),
                 TextColumn::make('notel')->label('No. Telp')->searchable(),

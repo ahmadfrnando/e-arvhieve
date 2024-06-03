@@ -9,4 +9,6 @@ use Filament\Resources\Pages\CreateRecord;
 class CreateDinas extends CreateRecord
 {
     protected static string $resource = DinasResource::class;
+
+    protected static ?string $title = 'Buat Dinas';
 }

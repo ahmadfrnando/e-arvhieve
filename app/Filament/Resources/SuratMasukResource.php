@@ -28,6 +28,15 @@ class SuratMasukResource extends Resource
 
     protected static ?string $navigationLabel = 'Surat Masuk';
 
+    public static function getPluralLabel(): ?string
+    {
+        $locale = app()->getLocale();
+        if ($locale == 'id') {
+            return "Surat Masuk";
+        } else
+            return "Surat Masuk";
+    }
+
     public static function form(Form $form): Form
     {
         return $form

@@ -34,6 +34,18 @@ class SuratKeluarResource extends Resource
 
     protected static ?string $navigationLabel = 'Surat Keluar';
 
+    public static function getPluralLabel(): ?string
+    {
+        $locale = app()->getLocale();
+        if($locale == 'id'){
+            return "Surat Keluar" ;
+        }
+        else
+            return "Surat Keluar" ;
+
+    }
+
+
     public static function form(Form $form): Form
     {
         return $form
@@ -115,8 +127,8 @@ class SuratKeluarResource extends Resource
             ->actions([
                 Tables\Actions\EditAction::make()->hidden(fn () => !auth()->user()->isAdmin),
                 Tables\Actions\Action::make('update')
-                ->icon('heroicon-c-arrow-path')
-                ->color('warning')
+                    ->icon('heroicon-c-arrow-path')
+                    ->color('warning')
                     ->form([
                         Select::make('status')
                             ->options([

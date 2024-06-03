@@ -11,4 +11,4 @@ Route::get('/', function () {
 Route::get('/download-surat-masuk/{record}', [DownloadController::class, 'downloadsuratmasuk'] )->name('download.surat-masuk'); 
 Route::get('/download-surat-keluar/{record}', [DownloadController::class, 'downloadsuratkeluar'] )->name('download.surat-keluar'); 
 Route::get('/laporan-surat-masuk', [PDFController::class, 'cetaksuratmasuk'])->name('download.laporan-surat-masuk'); 
-Route::get('/laporan-surat-masukkeluar', [PDFController::class, 'cetaksuratkeluar'])->name('download.laporan-surat-keluar'); 
+Route::get('/laporan-surat-keluar', [PDFController::class, 'cetaksuratkeluar'])->name('download.laporan-surat-keluar'); 
